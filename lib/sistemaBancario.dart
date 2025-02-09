@@ -4,17 +4,17 @@ import 'conta.dart';
 class SistemaBancario {
 	final String _nomeInstituicao;
 	final List<Conta> _contas;
-	final List<CaixaEletronico> _caixas;
+	final List<CaixaEletronico> _caixas = [];
 
 	SistemaBancario({
 		required String nomeInstituicao,
 		required List<Conta> contas,
-		required List<CaixaEletronico> caixas
 	}) : _nomeInstituicao = nomeInstituicao,
-		 _contas = contas,
-		 _caixas = caixas;
+		 _contas = contas;
 
 	String get nomeInstituicao => _nomeInstituicao;
+
+  List<Conta> get contas => _contas; 
 
 	void addConta(Conta novaConta) {
 		_contas.add(novaConta);
